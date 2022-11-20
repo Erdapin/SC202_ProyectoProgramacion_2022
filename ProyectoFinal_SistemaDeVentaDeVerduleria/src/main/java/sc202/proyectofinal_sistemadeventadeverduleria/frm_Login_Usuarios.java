@@ -179,7 +179,13 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
             formulario.setLocationRelativeTo(null);
             formulario.setVisible(true);
             this.dispose();
-        }else {
+        } else if (usuario.equals("Jeremy")){
+            frm_MenuPrincipal_Vendedores formulario = new frm_MenuPrincipal_Vendedores();
+            formulario.setLocationRelativeTo(null);
+            formulario.setVisible(true);
+            this.dispose();
+        }
+        else {
             frm_MenuPrincipal_Clientes formulario = new frm_MenuPrincipal_Clientes();
             formulario.setLocationRelativeTo(null);
             formulario.setVisible(true);
