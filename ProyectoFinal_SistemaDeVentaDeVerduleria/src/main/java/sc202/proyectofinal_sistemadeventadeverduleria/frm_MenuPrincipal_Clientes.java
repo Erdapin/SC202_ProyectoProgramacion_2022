@@ -26,21 +26,143 @@ public class frm_MenuPrincipal_Clientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        btnVerduras = new javax.swing.JButton();
+        btnFrutas = new javax.swing.JButton();
+        btnOtros = new javax.swing.JButton();
+        lblMenuClientes = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnCarrito = new javax.swing.JButton();
+        btnUsuario = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        btnVerduras.setBackground(new java.awt.Color(0, 0, 0));
+        btnVerduras.setForeground(new java.awt.Color(0, 0, 0));
+        btnVerduras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/verduras.png"))); // NOI18N
+        btnVerduras.setBorder(null);
+
+        btnFrutas.setBackground(new java.awt.Color(0, 0, 0));
+        btnFrutas.setForeground(new java.awt.Color(0, 0, 0));
+        btnFrutas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/frutas.png"))); // NOI18N
+        btnFrutas.setBorder(null);
+
+        btnOtros.setBackground(new java.awt.Color(0, 0, 0));
+        btnOtros.setForeground(new java.awt.Color(0, 0, 0));
+        btnOtros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/snacks.png"))); // NOI18N
+        btnOtros.setBorder(null);
+
+        lblMenuClientes.setFont(new java.awt.Font("Eras Bold ITC", 0, 24)); // NOI18N
+        lblMenuClientes.setForeground(new java.awt.Color(26, 77, 46));
+        lblMenuClientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMenuClientes.setText("Seleccione el producto");
+
+        jPanel2.setBackground(new java.awt.Color(34, 40, 49));
+
+        btnCarrito.setBackground(new java.awt.Color(34, 40, 49));
+        btnCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/carrito.png"))); // NOI18N
+        btnCarrito.setBorder(null);
+
+        btnUsuario.setBackground(new java.awt.Color(34, 40, 49));
+        btnUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/usuario-50.png"))); // NOI18N
+        btnUsuario.setBorder(null);
+
+        btnSalir.setBackground(new java.awt.Color(34, 40, 49));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/salir.png"))); // NOI18N
+        btnSalir.setBorder(null);
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnCarrito)
+                .addGap(18, 18, 18)
+                .addComponent(btnUsuario)
+                .addGap(18, 18, 18)
+                .addComponent(btnSalir)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalir)
+                    .addComponent(btnUsuario)
+                    .addComponent(btnCarrito))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lblMenuClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(btnVerduras)
+                            .addGap(60, 60, 60)
+                            .addComponent(btnFrutas)
+                            .addGap(61, 61, 61)
+                            .addComponent(btnOtros)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)))
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(lblMenuClientes)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnOtros)
+                    .addComponent(btnFrutas)
+                    .addComponent(btnVerduras))
+                .addGap(63, 63, 63)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        frm_Login_Usuarios formulario = new frm_Login_Usuarios();
+        
+        //Permite centrar un formulario en pantalla
+        formulario.setLocationRelativeTo(null);
+        
+        //Mostrar el formulario en pantalla
+        formulario.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +200,14 @@ public class frm_MenuPrincipal_Clientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCarrito;
+    private javax.swing.JButton btnFrutas;
+    private javax.swing.JButton btnOtros;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnUsuario;
+    private javax.swing.JButton btnVerduras;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblMenuClientes;
     // End of variables declaration//GEN-END:variables
 }

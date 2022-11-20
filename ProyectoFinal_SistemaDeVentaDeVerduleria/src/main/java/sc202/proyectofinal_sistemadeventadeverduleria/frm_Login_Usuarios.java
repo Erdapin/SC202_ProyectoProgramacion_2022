@@ -31,7 +31,7 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         lblLogin = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JPasswordField();
+        txtContraseña = new javax.swing.JPasswordField();
         btnIngresar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
@@ -43,7 +43,7 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel2.setBackground(new java.awt.Color(34, 40, 49));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         lblLogin.setBackground(new java.awt.Color(57, 62, 70));
         lblLogin.setFont(new java.awt.Font("Eras Bold ITC", 0, 24)); // NOI18N
@@ -54,11 +54,16 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
         txtUsuario.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(57, 62, 70));
 
-        txtPassword.setForeground(new java.awt.Color(57, 62, 70));
+        txtContraseña.setForeground(new java.awt.Color(57, 62, 70));
 
         btnIngresar.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         btnIngresar.setForeground(new java.awt.Color(57, 62, 70));
         btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
         btnSalir.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(57, 62, 70));
@@ -96,7 +101,7 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
                                 .addComponent(btnSalir)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnRegistrar))
-                            .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtContraseña, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
@@ -112,7 +117,7 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
                     .addComponent(imgUsuario))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(imgContraseña, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -129,23 +134,20 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(imgVerduras)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                    .addComponent(imgVerduras)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(imgVerduras)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,6 +168,24 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        // TODO add your handling code here:
+        String usuario = txtUsuario.getText();
+        String Contraseña = String.valueOf(txtContraseña.getPassword());
+        
+        if (usuario.equals("Admin")){
+            frm_MenuPrincipal_Admin formulario = new frm_MenuPrincipal_Admin();
+            formulario.setLocationRelativeTo(null);
+            formulario.setVisible(true);
+            this.dispose();
+        }else {
+            frm_MenuPrincipal_Clientes formulario = new frm_MenuPrincipal_Clientes();
+            formulario.setLocationRelativeTo(null);
+            formulario.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,7 +232,7 @@ public class frm_Login_Usuarios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblLogin;
-    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JPasswordField txtContraseña;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
