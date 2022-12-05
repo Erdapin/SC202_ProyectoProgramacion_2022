@@ -5,10 +5,11 @@ public class Frutas extends Productos {
     private String temporadaFrutas;
     
     //Constructores
-    public Frutas(String temporadaFrutas, String nombreProducto, Double precioProducto, String fechaIngreso, int cantidadProducto) {
-        super(nombreProducto, precioProducto, fechaIngreso, cantidadProducto);
+    public Frutas(String temporadaFrutas, String nombreProducto, Double precioProducto, String fechaIngreso, String idProducto, int cantidadProducto) {
+        super(nombreProducto, precioProducto, fechaIngreso, idProducto, cantidadProducto);
         this.temporadaFrutas = temporadaFrutas;
     }
+
     public Frutas() {
         super();
         this.temporadaFrutas = "";

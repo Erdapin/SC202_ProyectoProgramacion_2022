@@ -7,12 +7,13 @@ public class Otros extends Productos {
     private String marcaProducto;
     
     //Constructores
-    public Otros(String tipoProducto, String distribuidorProducto, String marcaProducto, String nombreProducto, Double precioProducto, String fechaIngreso, int cantidadProducto) {
-        super(nombreProducto, precioProducto, fechaIngreso, cantidadProducto);
+    public Otros(String tipoProducto, String distribuidorProducto, String marcaProducto, String nombreProducto, Double precioProducto, String fechaIngreso, String idProducto, int cantidadProducto) {
+        super(nombreProducto, precioProducto, fechaIngreso, idProducto, cantidadProducto);
         this.tipoProducto = tipoProducto;
         this.distribuidorProducto = distribuidorProducto;
         this.marcaProducto = marcaProducto;
     }
+
     public Otros() {
         super();
         this.tipoProducto = "";

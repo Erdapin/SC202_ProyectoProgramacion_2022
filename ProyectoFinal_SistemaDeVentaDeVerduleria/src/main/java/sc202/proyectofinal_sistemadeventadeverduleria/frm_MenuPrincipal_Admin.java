@@ -72,6 +72,11 @@ public class frm_MenuPrincipal_Admin extends javax.swing.JFrame {
         btnProductos.setText("Productos");
 
         btnAgregarProducto.setText("Agregar");
+        btnAgregarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarProductoActionPerformed(evt);
+            }
+        });
         btnProductos.add(btnAgregarProducto);
 
         btnMostrarProductos.setText("Listar");
@@ -81,6 +86,11 @@ public class frm_MenuPrincipal_Admin extends javax.swing.JFrame {
         btnProductos.add(btnModificarProducto);
 
         btnBorrarProducto.setText("Borrar");
+        btnBorrarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarProductoActionPerformed(evt);
+            }
+        });
         btnProductos.add(btnBorrarProducto);
 
         jMenu1.add(btnProductos);
@@ -155,6 +165,20 @@ public class frm_MenuPrincipal_Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnAgregarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoActionPerformed
+        // TODO add your handling code here:
+        frm_Admin_AgregarProductos formulario = new frm_Admin_AgregarProductos();
+        formulario.setLocationRelativeTo(null);
+        formulario.setVisible(true);
+    }//GEN-LAST:event_btnAgregarProductoActionPerformed
+
+    private void btnBorrarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarProductoActionPerformed
+        // TODO add your handling code here:
+        frm_Admin_BorrarProductos formulario = new frm_Admin_BorrarProductos();
+        formulario.setLocationRelativeTo(null);
+        formulario.setVisible(true);
+    }//GEN-LAST:event_btnBorrarProductoActionPerformed
 
     /**
      * @param args the command line arguments

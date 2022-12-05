@@ -5,10 +5,11 @@ public class Productos {
     protected String nombreProducto;
     protected Double precioProducto;
     protected String fechaIngreso;
+    protected String idProducto;
     protected int cantidadProducto;
     
     //Constructores de la clase parent productos
-    public Productos(String nombreProducto, Double precioProducto, String fechaIngreso, int cantidadProducto) {
+    public Productos(String nombreProducto, Double precioProducto, String fechaIngreso, String idProducto, int cantidadProducto) {
         this.nombreProducto = nombreProducto;
         this.precioProducto = precioProducto;
         this.fechaIngreso = fechaIngreso;
@@ -18,6 +19,7 @@ public class Productos {
         this.nombreProducto = "";
         this.precioProducto = 0.0;
         this.fechaIngreso = "";
+        this.idProducto = "";
         this.cantidadProducto = 0;
     }
     
@@ -44,6 +46,14 @@ public class Productos {
 
     public void setFechaIngreso(String fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
+    }
+
+    public String getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(String idProducto) {
+        this.idProducto = idProducto;
     }
 
     public int getCantidadProducto() {
