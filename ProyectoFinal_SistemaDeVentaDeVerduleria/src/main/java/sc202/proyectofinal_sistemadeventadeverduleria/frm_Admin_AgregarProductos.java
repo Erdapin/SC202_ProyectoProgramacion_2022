@@ -53,7 +53,7 @@ public class frm_Admin_AgregarProductos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         lblAgregarProductos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblAgregarProductos.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,7 +75,7 @@ public class frm_Admin_AgregarProductos extends javax.swing.JFrame {
         lblCantidad.setText("Cantidad");
 
         txtNombre.setBackground(new java.awt.Color(57, 62, 70));
-        txtNombre.setForeground(new java.awt.Color(57, 62, 70));
+        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
         txtNombre.setCaretColor(new java.awt.Color(57, 62, 70));
         txtNombre.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
